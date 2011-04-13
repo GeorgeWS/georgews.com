@@ -1,0 +1,15 @@
+#archives {
+	margin: 0px;
+	padding: 25px 25px 0px 25px;
+}
+#archives li {
+	display: inline;
+	padding-right: 2em;
+}
+#archives p {
+	margin: 0px;
+	line-height: 0pt;
+}
+span.archiveDate {
+	font-style: italic;
+}

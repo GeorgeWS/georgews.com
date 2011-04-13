@@ -1,0 +1,7 @@
+---
+exclude: ['Rakefile.rb', 'Readme.md']
+growl: true
+paginate: 5
+markdown: rdiscount
+permalink: pretty
+pygments: true

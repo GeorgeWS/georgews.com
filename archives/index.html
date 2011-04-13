@@ -1,0 +1,15 @@
+---
+layout: main
+stylesheet: archives.css
+title: Archives
+---
+<ul id="archives">
+	{% for post in site.posts %}
+	<li>
+		<p>
+			<a href="{{ post.url }}">{{ post.title | truncate:50 }}</a>
+			<span class="archiveDate"> ~ {{ post.date | date_to_string }}</span>
+		</p>
+	</li>
+	{% endfor %}
+</ul>
