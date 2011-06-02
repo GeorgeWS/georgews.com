@@ -16,7 +16,7 @@ Green walls and brown shades pulled up
 I can't help but think  
 
 Math swirls through my head  
-Earth swirling beneath my feet  
+Earth spinning beneath my feet  
 I know they're the same  
 
 Sitting in my room  
