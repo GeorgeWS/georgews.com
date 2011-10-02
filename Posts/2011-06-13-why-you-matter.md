@@ -1,7 +1,4 @@
----
-title: Why You Matter
-layout: post
----
+# Why You Matter #
 
 A lot of people seem to think what they do can't make much of a difference, because they're just individual people among billions of others. Some people wish they had a purpose, or were as important as other people, but believe that they're not. People get into this mindset, and then they make stupid decisions or just let themselves float through life doing nothing.
 
