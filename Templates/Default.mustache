@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<!--
+	Howdy! You're welcome to look around my site's compiled code here, but I bet you'd rather see the whole thing, uncompiled, over on github: http://github.com/GeorgeWS/georgews.com
+-->
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="author" content="George Woodliff-Stanley">
+		<meta name="description" content="The personal website of George Woodliff-Stanley.">
+	
+		<title>George Woodliff-Stanley – {{title}}</title>
+	
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		
+		{{#stylesheets}}
+		<link rel="stylesheet" href="/stylesheets/{{stylesheetName}}.css">
+		{{/stylesheets}}
+	
+	</head>
+	<body>
+		<section id ="content">{{{content}}}</section>
+	</body>
+</html>
