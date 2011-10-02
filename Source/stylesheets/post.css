@@ -22,3 +22,5 @@
 }
 .continue-reading a { text-decoration: none; }
 .continue-reading a:hover { text-decoration: underline }*/
+.gist-meta { display: none; }
+.gist-data { border-bottom: none !important; }

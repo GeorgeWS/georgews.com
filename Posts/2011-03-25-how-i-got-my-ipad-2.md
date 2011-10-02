@@ -14,75 +14,7 @@ Now all I had to do was create a way to be notified *immediately* of any availab
 
 If you want an iPad and you've got Target stores in your area, just open up this script in AppleScript Editor and run it until you've found your shiny new device:
 
-	-- USER INPUT
-	set iPadWifiOr3G to button returned of (display dialog "Choose whether you're looking for a WiFi or a Wifi + 3G iPad." buttons {"WiFi", "WiFi+3G"})
-	set iPadModel to iPadWifiOr3G
-	if iPadWifiOr3G contains "WiFi+3G" then
-		set iPadDataPlan to button returned of (display dialog "Select the carrier you'd like to use." buttons {"AT&T", "Verizon"})
-		set iPadModel to iPadModel & " " & iPadDataPlan
-	end if
-	set iPadColor to button returned of (display dialog "Select the color of iPad you're looking for." buttons {"Black", "White"})
-	set iPadModel to iPadModel & " " & iPadColor
-	set iPadStorage to button returned of (display dialog "Select the size of iPad you're looking for." buttons {"16GB", "32GB", "64GB"})
-	set iPadModel to iPadModel & " " & iPadStorage
-	set alliPadModels to {"WiFi Black 16GB", "WiFi Black 32GB", "WiFi Black 64GB", "WiFi White 16GB", "WiFi White 32GB", "WiFi White 64GB", "WiFi+3G AT&T Black 16GB", "WiFi+3G AT&T Black 32GB", "WiFi+3G AT&T Black 64GB", "WiFi+3G AT&T White 16GB", "WiFi+3G AT&T White 32GB", "WiFi+3G AT&T White 64GB", "WiFi+3G Verizon Black 16GB", "WiFi+3G Verizon Black 32GB", "WiFi+3G Verizon Black 64GB", "WiFi+3G Verizon White 16GB", "WiFi+3G Verizon White 32GB", "WiFi+3G Verizon White 64GB"}
-	set allCorrespondingTargetDCPINumbers to {"057-10-1830", "057-10-1831", "057-10-1832", "057-10-1839", "057-10-1840", "057-10-1841", "057-10-1833", "057-10-1834", "057-10-1835", "057-10-1842", "057-10-1843", "057-10-1844", "057-10-1836", "057-10-1837", "057-10-1838", "057-10-1845", "057-10-1846", "057-10-1847"}
-	set DCPINumber to item indexOfItemInList(alliPadModels, iPadModel) of allCorrespondingTargetDCPINumbers
-	set zipCode to text returned of (display dialog "Enter your zip code so nearby Target stores can be located and checked for iPad availability. (Only valid zip codes are allowed.)" default answer "Ex. 12345")
-	repeat
-		if (count of (characters of zipCode)) is 5 then
-			try
-				set zipCode to zipCode as number
-				exit repeat
-			on error
-				set zipCode to text returned of (display dialog "That was not a valid zip code. Try again." default answer "Ex. 12345")
-			end try
-		else
-			set zipCode to text returned of (display dialog "That was not a valid zip code. Try again." default answer "Ex. 12345")
-		end if
-	end repeat
-	set emailAddress to text returned of (display dialog "Enter the email address at which you'd like to be notified when the iPad you're looking for becomes available. (And just do it right, because this one isn't getting checked.)" default answer "Ex. john.appleseed@me.com")
-
-	--SCRIPT
-	repeat
-		set targetStoreiPadStockInfo to (do shell script "curl -s --data \"_dyncharset=ISO-8859-1&asin=&dpci=" & DCPINumber & "&zipcode=" & zipCode & "&city=&state=\" http://sites.target.com/site/en/spot/mobile_fiats_results.jsp?_DARGS=/site/en/spot/mobile_fiats.jsp | grep -A 2 strong | sed -e 's/<p><strong>//' -e 's/<\\/strong><br\\/>//' -e 's/<br \\/>//' -e 's/<\\/p>//' -e 's/--//' -e 's/^[ 	]*//;s/[ 	]*$//'") -- This is Garrett Murray's Shell Script. Thanks!
-		set ASTID to AppleScript's text item delimiters
-		set AppleScript's text item delimiters to ((return as text) & (return as text))
-		set targetStores to text items of targetStoreiPadStockInfo
-		set AppleScript's text item delimiters to ASTID
-		set targetStoresWithiPads to {}
-		repeat with targetStore in targetStores
-			if targetStore does not contain "Out Of Stock" then set targetStoresWithiPads to targetStoresWithiPads & targetStore
-			--if targetStore contains "Out Of Stock" then set targetStoresWithiPads to targetStoresWithiPads & targetStore -- This is for testing. Don't use it.
-		end repeat
-		if (count of targetStoresWithiPads) is greater than 0 then
-			set ASTID to AppleScript's text item delimiters
-			set AppleScript's text item delimiters to ((return as text) & (return as text))
-			set targetStoresWithiPadsString to (targetStoresWithiPads as string)
-			set AppleScript's text item delimiters to ASTID
-			set iPadAlertMessage to "The iPad 2 " & iPadModel & " is available in the following stores:" & (return as text) & (return as text) & targetStoresWithiPadsString & (return as text) & (return as text) & "Act fast!"
-			tell application "Mail"
-				set theNewMessage to make new outgoing message with properties {subject:"Your iPad is Available!", content:iPadAlertMessage, visible:false}
-				tell theNewMessage
-					make new to recipient at end of to recipients with properties {address:emailAddress}
-					send
-				end tell
-			end tell
-		end if
-		delay 60
-	end repeat
-
-	--SUBROUTINES
-	on indexOfItemInList(theList, theItem)
-		set itemIndex to 0
-		repeat with i from 1 to (count of items in theList)
-			if (item i of theList) is equal to theItem then
-				set itemIndex to i
-				exit repeat
-			end if
-		end repeat
-		return itemIndex
-	end indexOfItemInList
+<script src="https://gist.github.com/1258039.js"></script>
 	
 That whole "user input" section of the script was added just to make it easier to customize the iPad search, and make the script more reusable (at least, by other people). You're welcome.
 
