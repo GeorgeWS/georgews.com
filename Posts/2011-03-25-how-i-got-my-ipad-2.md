@@ -1,7 +1,4 @@
----
-title: How I Got My iPad 2
-layout: post
---- 
+# How I Got My iPad 2 #
 
 ## Skip this Part if You're Just Here to Get an iPad ##
 

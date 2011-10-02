@@ -1,7 +1,4 @@
----
-title: Dear Leaders of the World
-layout: post
---- 
+# Dear Leaders of the World #
 
 *"The universe is probably littered with the one-planet graves of cultures which made the sensible economic decision that there's no good reason to go into space–each discovered, studied, and remembered by the ones who made the irrational decision."* – [XKCD](http://xkcd.com/893/ "65 Years")
 

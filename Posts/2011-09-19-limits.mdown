@@ -1,7 +1,4 @@
----
-title: Limits
-layout: post
---- 
+# Limits #
 
 Perhaps the biggest challenge in life is learning to live with limits. That is, not limiting yourself, but simply being able to accept that there are limits intrinsic to living a finite life within an environment of infinite complexity and unlimited possibilities.
 

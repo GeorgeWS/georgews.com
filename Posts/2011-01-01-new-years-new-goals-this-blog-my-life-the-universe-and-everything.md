@@ -1,7 +1,5 @@
----
-title: New Years, New Goals, This Blog, My Life, The Universe and Everything
-layout: post
---- 
+# New Years, New Goals, This Blog, My Life, The Universe and Everything #
+
 Hopefully this first post (except, of course, for the test post, which I decided I'd keep for posterity) is profound or otherwise interesting enough to you that you'll read most, or even part of it, and I may begin to gain a following of people who are at least somewhat interested in the events and musings of my life. I'll try to spare you a long introduction, with the assumption that you already have some clue of who I am since you made it to my site. If by some miracle you find yourself reading this *without* an inkling of a notion as to my identity, then I will simply direct you to [my twitter stream](http://twitter.com/gmws82), where you can likely find out quite a bit about me.
 
 

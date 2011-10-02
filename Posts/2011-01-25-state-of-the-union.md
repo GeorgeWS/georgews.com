@@ -1,7 +1,4 @@
----
-title: State of the Union
-layout: post
---- 
+# State of the Union #
 
 "None of this will be easy. All of it will take time. And it will be harder, because we will argue about *everything*."
 

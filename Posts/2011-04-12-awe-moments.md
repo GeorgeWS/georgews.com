@@ -1,7 +1,4 @@
----
-title: Awe Moments
-layout: post
---- 
+# Awe Moments #
 
 Sitting in my room  
 Behind a mask of homework  
