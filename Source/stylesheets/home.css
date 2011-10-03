@@ -1,0 +1,30 @@
+.box {
+	font-family: "Gill Sans" sans-serif;
+}
+#about.box {
+	background-color: #e98085; /* Red Cherry – Light */
+	border-color: #901712; /* Red Cherry – Dark */
+}
+#about.box h1 {
+	color: #901712; /* Red Cherry – Dark */
+	text-shadow: 0px 1px #f0b5b8; /* Desaturated Red Cherry – Light */
+}
+#articles.box {
+	background-color: #f0aa7a; /* Sungold Cherry – Light (Sat: 55) */
+	border-color: #e1351e; /* Sungold Cherry – Dark */
+}
+#articles.box h1 {
+	color: #e1351e; /* Sungold Cherry – Dark */
+	text-shadow: 0px 1px #f6d1b6; /* Desaturated Sungold Cherry – Light */
+}
+/*#articles.box a {
+	color: #ec9483;
+}*/
+#projects.box {
+	background-color: #fce77c; /* Yellow Pear – Light */
+	border-color: #ea7e27; /* Yellow Pear – Dark */
+}
+#projects.box h1 {
+	color: #ea7e27; /* Yellow Pear – Dark */
+	text-shadow: 0px 1px #fdf2b8; /* Desaturated Yellow Pear – Light */
+}

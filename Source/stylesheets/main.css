@@ -3,22 +3,54 @@ article, footer, header, nav, section { display:block; }
 nav ul { list-style:none; }
 blockquote, q { quotes:none; }
 blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration:none }
+a:hover { text-decoration: underline; }
 h1, h2, h3, h4 { margin: 0; display:inline; }
 
 /* Main */
 html {
-	background: #ecfddb;
+	background: #fcf2e7;
 }
 body {
-	width: 700px;
+	width: 620px;
 	margin: 0px auto;
-	background-color: #f8dada;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	/*padding: 0px 0px 3px 0px;
-	-webkit-box-shadow: 0px 1px 5px black;
-	-moz-box-shadow: 0px 1px 5px black;
-	box-shadow: 0px 1px 5px black;*/
+}
+body > header a:hover {
+	text-decoration: none;
+}
+.box {
+	margin: 45px 0px;
+	padding: 10px 25px;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 16px;
+		-moz-border-radius: 16px;
+		-webkit-border-radius: 16px;
+	background-clip: padding-box;
+		-moz-background-clip: padding-box;
+		-webkit-background-clip: padding-box;
+	box-shadow: 0px 1px 1px 0px white;
+		-moz-box-shadow: 0px 1px 1px 0px white;
+		-webkit-box-shadow: 0px 1px 1px 0px white;
+	overflow: hidden;
+}
+#logotype {
+	color: #8E5218;
+	text-shadow: 0px 2px 2px #613510;
+	font-family: Georgia;
+	font-size: 56px;
+	display: block;
+}
+
+/* 500-pixel layout for smaller screens (pixel sizes for this were lovingly stolen from Marco.org, because he has undoubtedly put a lot of thought into choosing the ideal widths) */
+@media (max-width: 680px) {
+    body { width: 500px; }
+}
+
+/* 240-pixel layout for iPhone-sized screens (also stolen from our coffee-drinking friend) */
+@media (max-width: 520px) {
+    body {
+    	width: 300px;
+        font-size: 14px;
+    }
 }
